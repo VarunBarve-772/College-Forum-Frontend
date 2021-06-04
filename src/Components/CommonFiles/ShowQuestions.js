@@ -9,7 +9,7 @@ const ShowQuestions = (props) => {
 
     useEffect(() =>{
         
-        fetch(`http://127.0.0.1:8000/qna/${props.fetchUrl}`, {
+        fetch(`https://collegeforum.pythonanywhere.com/qna/${props.fetchUrl}`, {
       
             // Adding method type
             method: "POST",
@@ -42,7 +42,10 @@ const ShowQuestions = (props) => {
         history.push('/Question')
     }
 
-    questionsList = questionsList.map(question => {
+    if (questionsList.length === 0) {
+        questionsList = <h2>No Questions</h2>    
+    } else {
+        questionsList = questionsList.map(question => {
             return (
                 <div key={question.id} onClick={ () => toQuestionPage(question.id) } className="sec-3_div">
                     <p> 
@@ -53,7 +56,8 @@ const ShowQuestions = (props) => {
                     <h6> { question.name } </h6>
                 </div>
             )
-    });
+        });    
+    }
 
     return (
         <div className="sec-3">

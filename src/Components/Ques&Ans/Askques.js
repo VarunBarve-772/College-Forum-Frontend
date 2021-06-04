@@ -15,7 +15,7 @@ function Aques(props) {
         if(data.codeContent === "") {
             data.codeContent = 'None';
         }
-        fetch("http://127.0.0.1:8000/qna/AddQuestion", {
+        fetch("https://collegeforum.pythonanywhere.com/qna/AddQuestion", {
       
             // Adding method type
             method: "POST",

@@ -65,7 +65,7 @@ function Form(props) {
 
             data.idCard = base64File;
 
-            fetch("http://127.0.0.1:8000/authentication/registerUser", {
+            fetch("https://collegeforum.pythonanywhere.com/registerUser", {
       
                 // Adding method type
                 method: "POST",

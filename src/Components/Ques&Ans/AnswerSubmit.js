@@ -15,7 +15,7 @@ const AnswerSubmit = (props) => {
         }
         data.que_id = JSON.parse(sessionStorage.getItem('questionId'));
         console.log(data);
-        fetch("http://127.0.0.1:8000/qna/AnswerSubmit", {
+        fetch("https://collegeforum.pythonanywhere.com/qna/AnswerSubmit", {
       
             // Adding method type
             method: "POST",

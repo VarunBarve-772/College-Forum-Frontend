@@ -11,7 +11,7 @@ const RegisterOTP = (props) => {
 
   const onSubmitOTP = function(data) {
     data.location = 'register';
-    fetch("http://127.0.0.1:8000/authentication/OTP", {
+    fetch("https://collegeforum.pythonanywhere.com/authentication/OTP", {
       
             // Adding method type
             method: "POST",

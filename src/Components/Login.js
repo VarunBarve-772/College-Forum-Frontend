@@ -16,7 +16,7 @@ function Login(props) {
     };
     
     const submitForm = (data) => {
-        fetch("http://127.0.0.1:8000/authentication/loginUser", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/loginUser", {
       
             // Adding method type
             method: "POST",

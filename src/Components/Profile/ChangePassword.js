@@ -44,7 +44,7 @@ function ChangePassword() {
     const submitPassword = (data) => {
         console.log(data);
         if(btoa(data.oldPassword) === JSON.parse(sessionStorage.getItem('pass'))) {
-            fetch("http://127.0.0.1:8000/authentication/changePassword", {
+            fetch("https://collegeforum.pythonanywhere.com/authentication/changePassword", {
       
             // Adding method type
             method: "POST",

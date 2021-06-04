@@ -19,7 +19,7 @@ function UpdateProfile() {
     });
 
     useEffect( () => {
-        fetch(`http://127.0.0.1:8000/authentication/updateProfile`)
+        fetch(`https://collegeforum.pythonanywhere.com/authentication/updateProfile`)
 
         // Converting to JSON
         .then(response => response.json())
@@ -35,7 +35,7 @@ function UpdateProfile() {
     }, [])
     
     const submitProfile = (data, e) => {
-        fetch("http://127.0.0.1:8000/authentication/updateProfile", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/updateProfile", {
       
             // Adding method type
             method: "POST",

@@ -6,7 +6,7 @@ const ViewProfile = () => {
     const [userProfile, setUserProfile] = useState({});
 
     useEffect( () => {
-        fetch("http://127.0.0.1:8000/authentication/viewProfile", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/viewProfile", {
       
             // Adding method type
             method: "POST",

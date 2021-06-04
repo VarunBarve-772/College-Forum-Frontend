@@ -19,7 +19,7 @@ const ContactUs = (props) => {
     });
 
     const submitForm = (data) => {
-        fetch("http://127.0.0.1:8000/authentication/contactUs", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/contactUs", {
       
             // Adding method type
             method: "POST",

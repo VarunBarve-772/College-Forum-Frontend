@@ -23,7 +23,7 @@ const Username = (props) => {
 
     const submitForm = (data) => {
         console.log(data);
-        fetch("http://127.0.0.1:8000/authentication/forgetPasswordUsername", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/forgetPasswordUsername", {
       
             // Adding method type
             method: "POST",

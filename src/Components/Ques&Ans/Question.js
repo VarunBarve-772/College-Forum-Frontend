@@ -32,7 +32,7 @@ const Question = (props) => {
         let questionId = {
             "id": JSON.parse(sessionStorage.getItem('questionId'))
         } 
-        fetch(`http://127.0.0.1:8000/qna/QuesPage`, {
+        fetch(`https://collegeforum.pythonanywhere.com/qna/QuesPage`, {
       
             // Adding method type
             method: "POST",
@@ -74,7 +74,7 @@ const Question = (props) => {
             "type": "Q"
         }
 
-        fetch("http://127.0.0.1:8000/qna/ReportContent", {
+        fetch("https://collegeforum.pythonanywhere.com/qna/ReportContent", {
       
             // Adding method type
             method: "POST",

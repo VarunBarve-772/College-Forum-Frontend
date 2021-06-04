@@ -8,6 +8,8 @@ const Answers = (props) => {
     const [tempAnswerId, setTempAnswerId] = useState('');
     const [reportCategoryValue, setReportCategoryValue] = useState('');
 
+    let answerContent = props.answerList;
+
     const customStyles = {
         content : {
           top                   : '40%',
@@ -20,8 +22,6 @@ const Answers = (props) => {
           width                 : '600px',
         }
     };
-
-    let answerContent = props.answerList;
     
     const submitSatisfactoryAnswer = (answer_id) => {
         // if (answer_id === JSON.parse(sessionStorage.getItem('userId')))
@@ -30,7 +30,7 @@ const Answers = (props) => {
             que_id: JSON.parse(sessionStorage.getItem('questionId'))
         }
 
-        fetch("http://127.0.0.1:8000/qna/SubmitSatisfactoryAnswer", {
+        fetch("https://collegeforum.pythonanywhere.com/qna/SubmitSatisfactoryAnswer", {
       
             // Adding method type
             method: "POST",
@@ -71,7 +71,7 @@ const Answers = (props) => {
             "type": "A"
         }
 
-        fetch("http://127.0.0.1:8000/qna/ReportContent", {
+        fetch("https://collegeforum.pythonanywhere.com/qna/ReportContent", {
       
             // Adding method type
             method: "POST",

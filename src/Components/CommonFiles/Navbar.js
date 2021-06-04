@@ -7,7 +7,7 @@ const Navbar = (props) => {
     let history = useHistory();
 
     const userLogout = () => {
-        fetch(`http://127.0.0.1:8000/authentication/logoutUser`);
+        fetch(`https://collegeforum.pythonanywhere.com/authentication/logoutUser`);
         props.setUserId('');
         sessionStorage.clear();
         history.push('/');

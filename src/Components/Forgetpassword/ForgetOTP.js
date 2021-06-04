@@ -12,7 +12,7 @@ const ForgetOTP = (props) => {
 
   const onSubmitOTP = function(data) {
     data.location = 'forgetPassword'
-    fetch("http://127.0.0.1:8000/authentication/OTP", {
+    fetch("https://collegeforum.pythonanywhere.com/authentication/OTP", {
       
             // Adding method type
             method: "POST",
@@ -33,8 +33,10 @@ const ForgetOTP = (props) => {
         .then(json => {
           if(json['result'] === 'Valid') {
             props.setState(<ResetPass/>);
-          }else {
+          } else if (json.response === 'Invalid') {
             setOtpError('Invalid OTP');
+          } else if (json.response === 'Wrong') {
+            alert('Something Went Wrong, Please Try Again!!!')
           }
         });
       } 

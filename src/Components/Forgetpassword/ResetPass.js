@@ -38,7 +38,7 @@ const ResetPass = () => {
 
     const submitPassword = (data) => {
         console.log(data);
-        fetch("http://127.0.0.1:8000/authentication/changePassword", {
+        fetch("https://collegeforum.pythonanywhere.com/authentication/changePassword", {
     
         // Adding method type
         method: "POST",
@@ -57,7 +57,11 @@ const ResetPass = () => {
         
         // Displaying results to console
         .then(json => {
-            alert(json['response']);
+            if (json.response === 'Valid') {
+                alert(json['response']);
+            } else if (json.response === 'Wrong') {
+                alert('Something Went Wrong, Please Try Again!!!');
+            }
         });
         history.push('/Login');
     }
