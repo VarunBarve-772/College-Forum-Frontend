@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90a03c46.chunk.css",
+    "main.js": "/static/js/main.c5848cd6.chunk.js",
+    "main.js.map": "/static/js/main.c5848cd6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1a8142f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1a8142f6.js.map",
+    "static/js/2.322c32f8.chunk.js": "/static/js/2.322c32f8.chunk.js",
+    "static/js/2.322c32f8.chunk.js.map": "/static/js/2.322c32f8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.90a03c46.chunk.css.map": "/static/css/main.90a03c46.chunk.css.map",
+    "static/js/2.322c32f8.chunk.js.LICENSE.txt": "/static/js/2.322c32f8.chunk.js.LICENSE.txt",
+    "static/media/c1.37c4f068.png": "/static/media/c1.37c4f068.png",
+    "static/media/c2.65e16b26.png": "/static/media/c2.65e16b26.png",
+    "static/media/c3.2b0363aa.png": "/static/media/c3.2b0363aa.png",
+    "static/media/otp_send.83e17823.gif": "/static/media/otp_send.83e17823.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a8142f6.js",
+    "static/js/2.322c32f8.chunk.js",
+    "static/css/main.90a03c46.chunk.css",
+    "static/js/main.c5848cd6.chunk.js"
+  ]
+}
