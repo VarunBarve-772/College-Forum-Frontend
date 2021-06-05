@@ -85,8 +85,8 @@ function ChangePassword() {
                     <label>Old Password</label>
                     <input type={oldPasswordVisibility ? "text" : "password"} name="oldPassword" {...register('oldPassword')} className="form-control input-style" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('oldPassword')}>Show Password</span>
-                    <p>  { errors.oldPassword?.message } </p>
-                    <span> { oldPasswordErrorMessage } </span>
+                    <p className="error_msg"> { errors.oldPassword?.message } </p>
+                    <span className="error_msg"> { oldPasswordErrorMessage } </span>
                 </div>
 
 
@@ -94,14 +94,14 @@ function ChangePassword() {
                     <label>Password</label>
                     <input type={passwordVisibility ? "text" : "password"} name="password" {...register('password')} className="form-control input-style" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('password')}>Show Password</span>
-                    <p>  { errors.password?.message }</p>
+                    <p className="error_msg">  { errors.password?.message }</p>
                 </div>
 
                 <div className="form-group">
                     <label>Confirm Password</label>
                     <input type={confirmPasswordVisibility ? "text" : "password"} name="confirmPassword" {...register('confirmPassword')} className="form-control input-style" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('confirmPassword')}>Show Password</span>
-                    <p>  { errors.confirmPassword && "Passwords should match" }</p>
+                    <p className="error_msg">  { errors.confirmPassword && "Passwords should match" }</p>
                 </div>
 
                 <button type="submit" className="btn btn-primary save_btn" >Save</button>

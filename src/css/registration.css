@@ -174,7 +174,7 @@ label{
 }
 
 .left_banner{
-    height: 100vh;
+    height: 125vh;
     width: 45%;
     position: fixed;
     background-color: #2EA8B5;
@@ -186,7 +186,7 @@ label{
 }
 
 .register_bg{
-    height: 125vh;
+    height: 140vh;
     width: 100%;
     padding-top: 40px;
     background-color: #2EA8B5;
@@ -214,4 +214,9 @@ label{
     height: 200px;
     width: 350px;
     transform: translate(90%,50%);
+}
+
+.error_msg{
+    color: #a81717;
+    background-color: #ffa1a1;
 }

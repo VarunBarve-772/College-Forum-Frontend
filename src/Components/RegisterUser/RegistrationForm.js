@@ -158,13 +158,13 @@ function Form(props) {
                 <div className="form-group col">
                     <label>First Name</label>
                     <input type="text" name="firstName" {...register('firstName')} className="form-control register_input_style" placeholder="First Name..."/>
-                    <span>{ errors.firstName?.message }</span>
+                    <span className="error_msg">{ errors.firstName?.message }</span>
                 </div>
 
                 <div className="form-group col">
                     <label>Last Name</label>
                     <input type="text" name="lastName" {...register('lastName')} className="form-control register_input_style" placeholder="last Name..."/>
-                    <span>{ errors.lastName?.message }</span>
+                    <span className="error_msg">{ errors.lastName?.message }</span>
                 </div>
             </div>
 
@@ -172,13 +172,13 @@ function Form(props) {
                 <div className="form-group col">
                     <label>Enrollment Number</label>
                     <input type="text" name="enrollment" {...register('enrollment')} className="form-control register_input_style" placeholder="Enrollment Number..."/>
-                    <span>{ errors.enrollment?.message }</span>
+                    <span className="error_msg">{ errors.enrollment?.message }</span>
                 </div>
 
                 <div className="form-group col">
                     <label>Email</label>
                     <input type="text" name="email" {...register('email')} className="form-control register_input_style" placeholder="Email..."/>
-                    <span>{ errors.email?.message }</span>
+                    <span className="error_msg">{ errors.email?.message }</span>
                 </div>
             </div>
 
@@ -187,14 +187,14 @@ function Form(props) {
                     <label>Password</label>
                     <input type={passwordShown ? "text" : "password"} name="password" {...register('password')} className="form-control register_input_style" placeholder="Password..."/>
                     <span className="show-password" onClick={togglePasswordVisiblity}>Show Password</span>
-                    <span>  { errors.password?.message }</span>
+                    <span className="error_msg">{ errors.password?.message }</span>
                 </div>
 
                 <div className="form-group col">
                     <label>Confirm Password</label>
                     <input type={confirmPasswordShown ? "text" : "password"} name="confirmPassword" {...register('confirmPassword')} className="form-control register_input_style" placeholder="Confirm Password..."/>
                     <span className="show-password" onClick={toggleConfirmPasswordVisiblity}>Show Password</span>
-                    <span>  { errors.confirmPassword && "Passwords should match" }</span>
+                    <span className="error_msg">  { errors.confirmPassword && "Passwords should match" }</span>
                 </div>
             </div>
 
@@ -202,13 +202,13 @@ function Form(props) {
                 <div className="form-group col">
                     <label>Mobile number</label>
                     <input type="text" name="mobile" {...register('mobile')} className="form-control register_input_style" placeholder="Mobile Number..." />
-                    <span>{ errors.mobile?.message }</span>
+                    <span className="error_msg">{ errors.mobile?.message }</span>
                 </div>
 
                 <div className="form-group col">
                     <label>Institute Name</label>
                     <input type="text" name="institute" {...register('institute')} className="form-control register_input_style" placeholder="Institute..."/>
-                    <span>{ errors.institute?.message }</span>
+                    <span className="error_msg">{ errors.institute?.message }</span>
                 </div>
             </div>
 
@@ -216,13 +216,13 @@ function Form(props) {
                 <div className="form-group col">
                     <label>Year</label>
                     <input type="text" name="year" {...register('year')} className="form-control register_input_style" placeholder="Year..."/>
-                    <span>{ errors.year && "This must be a number" }</span>
+                    <span className="error_msg">{ errors.year && "This must be a number" }</span>
                 </div>
 
                 <div className="id-div col">
                     <label className="id-label">Id Card photo</label><br/><br/>
                     <input type="file" name="idCard" {...register('idCard')}/>
-                    <span>{ idCardErrorMessage }</span>
+                    <span className="error_msg">{ idCardErrorMessage }</span>
                 </div>
             </div>
 

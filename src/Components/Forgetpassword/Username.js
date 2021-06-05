@@ -102,7 +102,7 @@ const Username = (props) => {
                             <form onSubmit={handleSubmit(submitForm)}>
                                 <div className="form-group">
                                     <input type="text" name="enrollment" {...register('enrollment')} className="form-control enrol_input_style" placeholder="Enter Enrollment..." />
-                                    <span>{ errors.enrollment?.message }</span>
+                                    <span className="error_msg">{ errors.enrollment?.message }</span>
                                 </div>
 
                                 <span> { usernameError } </span>

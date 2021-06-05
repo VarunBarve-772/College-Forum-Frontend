@@ -52,14 +52,14 @@ const AnswerSubmit = (props) => {
                 <p className="ans_btn"><i>I</i></p>
             </div>
 
-            <textarea {...register('answerContent', { required: true })} placeholder='Enter Your Answer' className="ask_ques_textarea"></textarea><br/>
+            <textarea {...register('answerContent', { required: true })} placeholder='Enter Your Answer' className="ans_textarea"></textarea><br/>
             <span>{ errors.answerContent?.type === 'required' && "Answer Field is required" }</span>
 
             {
                 codeState
                 ?
                 <div>
-                    <textarea name="codeContent" {...register('codeContent')} placeholder='Enter Your Code Here'></textarea><br/>
+                    <textarea className="ans_textarea" name="codeContent" {...register('codeContent')} placeholder='Enter Your Code Here'></textarea><br/>
                 </div>
                 :
                 <div>

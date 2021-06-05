@@ -195,3 +195,8 @@ label{
     padding: 15px;
     border: 3px solid #13252F;
 }
+
+.error_msg{
+    color: #a81717;
+    background-color: #ffa1a1;
+}

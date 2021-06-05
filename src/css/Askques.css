@@ -3,6 +3,23 @@ body{
     padding-top: 0;
 }
 
+.ask_bg{
+    position: absolute;
+    height: 120vh;
+    width: 100%;
+    z-index: -3;
+    background-color: #4199a5;
+  }
+  
+.ask_particles_bg{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
 .form{
     width: 800px;
     margin: 0;
@@ -11,20 +28,41 @@ body{
 
 .askcard{
     width: fit-content;
-    background-color: white;
+    background-color: #4199a5;
     padding: 0;
+    position: absolute;
+    top: 100px;
+    z-index: 3;
 }
 
-.ask_ques_input{
-    padding: 2px 5px;
-    width: 700px;
-    height: 150px;
-    border: 3px solid #13252F;
+.ques_btns{
+    display: flex;
+    position: relative;
+    left: 0;
+}
+
+.ask_op_btn{
+    height: 35px;
+    width: 35px;
+    justify-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-bottom: 0;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background-color: #13252F;
+    color: white;
+    padding-top: 4px;
+}
+
+.ask_op_btn i{
+    color: white;
 }
 
 .form-control:focus{
     box-shadow: none;
-    border: 3px solid #13252F;
+    border: none;
 }
 
 .ask_btn{
@@ -34,8 +72,9 @@ body{
     position: relative;
     display: inline-block;
     padding: 15px 25px;
+    margin-top: 0;
     width: fit-content;
-    background-color: #2EA8B5;
+    background-color: #ffffff;
     border: 2.5PX solid #13252F;
     text-transform: uppercase;
     color: #13252F;
@@ -44,13 +83,14 @@ body{
     box-shadow: -6px 6px 0 #13252F;
     text-decoration: none;
     font-weight: 550;
+    margin-bottom: 100px;
 }
 
 .ask_btn:hover {
     top: 3px;
     color: #13252F;
     left: -3px;
-    background-color: #2EA8B5;
+    background-color: #ffffff;
     box-shadow: -3px 3px 0 #13252F;
     border: 2.5PX solid #13252F;
 }
@@ -103,17 +143,17 @@ button:active.ask_btn {
     top: 6px;
     left: -6px;
     box-shadow: none;
-    background-color: #2EA8B5;
+    background-color: #ffffff;
 }
 
 button:active.ask_btn:before {
-    background-color: #2EA8B5;
+    background-color: #ffffff;
     bottom: 1px;
     right: 1px;
 }
 
 button:active.ask_btn:after {
-    background-color: #2EA8B5;
+    background-color: #ffffff;
     top: 1px;
     left: 1px;
 }
@@ -136,4 +176,48 @@ option{
 
 .askcard{
     margin-top: 3%;
+}
+
+.ask_ques_heading{
+    float: left;
+    margin: 0;
+    color: #13252F;
+}
+
+.ask_ques_textarea{
+    height: 200px;
+    width: 100%;
+    border: 3px solid #13252F;
+}
+
+.ask_row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ask_nav{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 3;
+    background-color: #ffffff;
+}
+
+.ask_navbar{
+    background-color: #13252F;
+}
+
+.error_msg{
+    /* background-color: #ffa1a1;
+    padding: 5px 150px 5px 10px;
+    border: 2px solid #a81717;
+    border-radius: 4px; */
+
+    /* color: #a81717;
+    background-color: #ffa1a1;
+    border: 2px solid #a81717;
+    border-radius: 5px; */
+
+    color: #a81717;
+    background-color: #ffa1a1;
 }

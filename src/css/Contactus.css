@@ -53,3 +53,8 @@
 .contact_heading{
     margin-bottom: 4%;
 }
+
+.error_msg{
+    color: #a81717;
+    background-color: #ffa1a1;
+}

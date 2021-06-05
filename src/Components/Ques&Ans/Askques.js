@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import Navbar from '../CommonFiles/Navbar';
 import '../../css/Askques.css';
+import Particles from 'react-particles-js';
 
 function Aques(props) {
 
@@ -42,56 +43,87 @@ function Aques(props) {
         });
     }
 
+    const particlesOptions = {
+        particles: {
+            number: {
+                value: 40,
+                desity: {
+                    enable: true,
+                    value_area: 900
+                }
+            },
+            
+            color: {
+                value: "#17242A"
+            },
+
+            size: {
+                value: 4
+            },
+
+            events: {
+                onhover: {
+                  enable: true,
+                  mode: "repulse"
+                },
+            }
+        }
+    }
+
     return(
         <div>
-            <Navbar setUserId={ props.setUserId }/>
+            <div className="ask_nav">
+                <Navbar className="ask_navbar" setUserId={ props.setUserId }/>
+            </div>
 
+            <div className="ask_wapper">
+                <Particles className="ask_particles_bg" params={particlesOptions} />
+                <div className="ask_bg"></div>
 
-            <div className="askcard">       
-                <form className="form" onSubmit={ handleSubmit(questionSubmit) }>
-                    <h2 className="add_ans_heading">Ask Your Question</h2><br/><br/><br/>
-                    
-                    <div className="ans_btns">
-                        <p className="ans_btn" onClick={ () => codeState?setCodeState(false):setCodeState(true)}><b>{ "{ }" }</b></p>
-                        <p className="ans_btn"><b>B</b></p>
-                        <p className="ans_btn"><i>I</i></p>
-                    </div>
-
-                    <textarea {...register('queContent', { required: true })} placeholder='Enter Your Question' className="ask_ques_textarea"></textarea>
-                    <span>{ errors.queContent?.type === 'required' && "Question Field is required" }</span>
-                    <br/>
-
-                    {
-                        codeState
-                        ?
-                        <div>
-                            <textarea name="codeContent" {...register('codeContent')} placeholder='Enter Your Code Here'></textarea><br/>
-                        </div>
-                        :
-                        <div>
-                            <input className="code_input" type='hidden' name="codeContent" {...register('codeContent')} ></input><br/>
-                        </div>
-                    }
-                    
-                    <div className="row">
-                        <div className="col-lg-6">
-                                <select name="category" {...register('category')} defaultValue="General">
-                                    <option value="General">General</option>
-                                    <option value="SVIIT">SVIIT</option>
-                                    <option value="SVITS">SVITS</option>
-                                    <option value="SVIM">SVIM</option>
-                                    <option value="SVVV">SVVV</option>
-                                    <option value="SVIFA">SVIFA</option>
-                                </select>
-                        </div>
-
-                        <div className="col-lg-6">
-                            <button type="submit" className="btn ask_btn">Publish question</button>
-                        </div>
-
+                <div className="askcard">       
+                    <form className="form" onSubmit={ handleSubmit(questionSubmit) }>
+                        <h2 className="ask_ques_heading">Ask Your Question</h2><br/><br/><br/>
                         
-                    </div>
-                </form>
+                        <div className="ques_btns">
+                            <p className="ask_op_btn" onClick={ () => codeState?setCodeState(false):setCodeState(true)}><b>{ "{ }" }</b></p>
+                            <p className="ask_op_btn"><b>B</b></p>
+                            <p className="ask_op_btn"><i>I</i></p>
+                        </div>
+
+                        <textarea {...register('queContent', { required: true })} placeholder='Enter Your Question' className="ask_ques_textarea"></textarea>
+                        <span className="error_msg">{ errors.queContent?.type === 'required' && "Question Field is required" }</span>
+                        <br/>
+
+                        {
+                            codeState
+                            ?
+                            <div>
+                                <textarea className="ask_ques_textarea" name="codeContent" {...register('codeContent')} placeholder='Enter Your Code Here'></textarea><br/>
+                            </div>
+                            :
+                            <div>
+                                <input className="code_input" type='hidden' name="codeContent" {...register('codeContent')} ></input><br/>
+                            </div>
+                        }
+                        
+                        <div className="ask_row">
+                            <div className="row_left">
+                                    <select name="category" {...register('category')} defaultValue="General">
+                                        <option value="General">General</option>
+                                        <option value="SVIIT">SVIIT</option>
+                                        <option value="SVITS">SVITS</option>
+                                        <option value="SVIM">SVIM</option>
+                                        <option value="SVVV">SVVV</option>
+                                        <option value="SVIFA">SVIFA</option>
+                                    </select>
+                            </div>
+
+                            <div className="row_right">
+                                <button type="submit" className="btn ask_btn">Publish question</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );

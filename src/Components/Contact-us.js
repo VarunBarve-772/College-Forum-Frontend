@@ -57,17 +57,17 @@ const ContactUs = (props) => {
                     <div className="form-group">
                         <label>Name</label>
                         <input type="text" name="name" {...register('name')} className="form-control input-style" />
-                        <span>{ errors.name?.message }</span>
+                        <span className="error_msg">{ errors.name?.message }</span>
                     </div>
 
                     <div className="form-group">
                         <label>Email</label>
                         <input type="text" name="email" {...register('email')} className="form-control input-style" />
-                        <span>{ errors.email?.message }</span>
+                        <span className="error_msg">{ errors.email?.message }</span>
                     </div>
 
                     <textarea {...register('content')} placeholder='Enter Your Query' className="contact_textarea"></textarea>
-                    <span>{ errors.content?.message }</span>
+                    <span className="error_msg">{ errors.content?.message }</span><br/>
 
                     <button type='submit' className="submit_btn">Submit</button> 
                 </form>
