@@ -117,7 +117,7 @@ function Login(props) {
 
                     <div className="bottom_links">
                         <p className="text-center">
-                            <Link to="/ForgetPassword">Forget Password</Link>
+                            <Link to="/ForgetPassword">Forget Password?</Link>
                         </p>
                         <br/>
                         <br/>
