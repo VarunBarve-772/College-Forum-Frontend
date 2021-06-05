@@ -94,12 +94,10 @@ function Login(props) {
                         <h3 className="login_heading">Login</h3>
                     </div>
 
-                    <div>{ errorMessage }</div>
-
                     <div className="form-group">
                         <label>Enrollment Number</label>
                         <input type="text" className="form-control login_input_style" name="enrollment" {...register('enrollment', { required: true })} placeholder="Enter Enrollment Number" />
-                        <span>{ errors.enrollment?.type === 'required' && "Enrollment Field is required" }</span>
+                        <span  className="error_msg">{ errors.enrollment?.type === 'required' && "Enrollment Field is required" }</span>
                     </div>
 
                     <br/>
@@ -108,8 +106,9 @@ function Login(props) {
                         <label>Password</label>
                         <input type={passwordShown ? "text" : "password"} name="password" {...register('password', { required: true })} className="form-control login_input_style" placeholder="Password..."/>
                         <span className="show-password" onClick={togglePasswordVisiblity}>Show Password</span>
-                        <span>{ errors.password?.type === 'required' && "Password Field is required" }</span>
+                        <span  className="error_msg">{ errors.password?.type === 'required' && "Password Field is required" }</span>
                     </div>
+                    <div className="error_msg">{ errorMessage }</div>   
 
                     <center>
                         <button type="submit" className="login_btn">Login</button>
