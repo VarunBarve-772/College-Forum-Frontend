@@ -74,19 +74,19 @@ function UpdateProfile() {
 
                 <div className="form-group">
                     <label className="profile-component">Email</label>
-                    <input type="text" {...register('email')} name="email" className="form-control input-style" placeholder={userProfileData.email} />
+                    <input type="text" {...register('email')} name="email" className="form-control input-style change_pass_input" placeholder={userProfileData.email} />
                     <span>{ errors.email?.message }</span>
                 </div>
 
                 <div className="form-group">
                     <label className="profile-component">Mobile number</label>
-                    <input type="tel" {...register('mobile')} name="mobile" className="form-control input-style" placeholder={userProfileData.mobile} />
+                    <input type="tel" {...register('mobile')} name="mobile" className="form-control input-style change_pass_input" placeholder={userProfileData.mobile} />
                     <span>{ errors.mobile?.message }</span>
                 </div>
 
                 <div className="form-group">
                     <label className="profile-component">Year</label>
-                    <input type="number" {...register('year')} name="year" className="form-control input-style" min='1' max='6' step='1' placeholder={userProfileData.year} />
+                    <input type="number" {...register('year')} name="year" className="form-control input-style change_pass_input" min='1' max='6' step='1' placeholder={userProfileData.year} />
                     <span>{ errors.year?.message }</span>
                 </div>
 

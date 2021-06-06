@@ -1,6 +1,8 @@
 .about-sec-2{
   border-top: 3px solid #13252F;
   background-color: #e8fdff;
+  padding: 50px;
+  color: white;
 }
 
 .team_container{
@@ -37,6 +39,8 @@
 .about-sec-1{
   background-color: white;
   justify-content: center;
+  padding: 50px;
+  color: white;
 }
 
 .about_content{

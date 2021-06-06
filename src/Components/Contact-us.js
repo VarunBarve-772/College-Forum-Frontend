@@ -56,13 +56,13 @@ const ContactUs = (props) => {
                 <form className="center" onSubmit={handleSubmit(submitForm)} >
                     <div className="form-group">
                         <label>Name</label>
-                        <input type="text" name="name" {...register('name')} className="form-control input-style" />
+                        <input type="text" name="name" {...register('name')} className="form-control input-style contact_input_style" />
                         <span className="error_msg">{ errors.name?.message }</span>
                     </div>
 
                     <div className="form-group">
                         <label>Email</label>
-                        <input type="text" name="email" {...register('email')} className="form-control input-style" />
+                        <input type="text" name="email" {...register('email')} className="form-control input-style contact_input_style" />
                         <span className="error_msg">{ errors.email?.message }</span>
                     </div>
 

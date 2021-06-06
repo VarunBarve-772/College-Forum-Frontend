@@ -22,7 +22,7 @@ const Navbar = (props) => {
                     <div className="row">
 
                         <div className="col-lg-4">
-                            <h1><Link to="/Home" className="title"> College Forum </Link></h1>                
+                            <h1 className="after_title"><Link to="/Home"> College Forum </Link></h1>                
                         </div>
 
                         <div className="col-lg-8">
@@ -44,7 +44,7 @@ const Navbar = (props) => {
                     <div className="row">
 
                         <div className="col-lg-4">
-                            <h1 className="title"><Link to="/"> College Forum </Link></h1>                
+                            <h1 className="before_title">College Forum</h1>                
                         </div>
 
                         <div className="col-lg-8">

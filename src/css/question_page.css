@@ -102,6 +102,11 @@
     border: 3px solid #2EA8B5;
 }
 
+.ans_textarea:focus{
+    outline: none !important;
+    border: 3px solid #2EA8B5;
+}
+
 .code_input{
     background-color: #d2fffd;
 }

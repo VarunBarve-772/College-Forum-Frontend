@@ -1,8 +1,21 @@
-.title{
+.after_title{
     cursor: pointer;
     color: white;
     margin-left: 11.2%;
 }
+
+.after_title:hover{
+    margin-left: 11.2%;
+    text-decoration: none;
+}
+
+.before_title{
+    margin-left: 50px;
+}
+/* 
+.before_title:hover{
+    text-decoration: none;
+} */
 
 .sec-1{
     background-color: #2EA8B5;

@@ -17,8 +17,8 @@
 }
 
 .login_input_style:focus{
-    outline: none;
-    color: #13252F;
+    outline: none !important;
+    border: 2px solid #13252F;
 }
 
 a{
