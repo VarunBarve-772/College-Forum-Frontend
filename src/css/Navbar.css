@@ -59,3 +59,11 @@
     margin-right: 25px;
     float: right;
 }
+
+.logo_img {
+    height: 80px;
+    width: 250px;
+    padding-bottom: 20px;
+    margin-left: 45px;
+    cursor: pointer;
+}

@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from './CommonFiles/Navbar';
 import '../css/ourteamcard.css';
 import Varun from '../Images/Varun.jpeg';
+import Vaibhav from '../Images/Vaibhav.jpg';
+import Sharma from '../Images/Sharma.jpg';
 
 const About = (props) => {
 
@@ -32,8 +34,13 @@ const About = (props) => {
                 <div className="about_team">
                   <div className="top">
                     <h2 className="name">Vaibhav Porwal</h2>
-                    <img className="circle-img" src="" alt="avatar_img" />
+                    <img className="circle-img" src={ Vaibhav } alt="avatar_img" />
                   </div>
+                  
+                  <div className="middle">
+                    <strong> Backend Developer & Designer </strong>
+                  </div>
+
                   <div className="bottom">
                     <p className="info">Email:<br/> vaibhav83porwal@gmail.com</p>
                     <p className="info">Mob No.: +91 9109517502</p>
@@ -49,6 +56,11 @@ const About = (props) => {
                     <h2 className="name">Varun Barve</h2>
                     <img className="circle-img" src={ Varun } alt="avatar_img" />
                   </div>
+
+                  <div className="middle">
+                    <strong> Full Stack Developer </strong>
+                  </div>
+
                   <div className="bottom">
                     <p className="info">Email: varunbarve94@gmail.com</p>
                     <p className="info">Mob No.: +91 9826456772</p>
@@ -62,8 +74,13 @@ const About = (props) => {
                 <div className="about_team">
                   <div className="top">
                     <h2 className="name">Varun Sharma</h2>
-                    <img className="circle-img"  alt="avatar_img" />
+                    <img className="circle-img" src={ Sharma } alt="avatar_img" />
                   </div>
+                  
+                  <div className="middle">
+                    <strong> Frontend Developer </strong>
+                  </div>
+
                   <div className="bottom">
                     <p className="info">Email : varunsharma13699@gmail.com</p>
                     <p className="info">Phone : +91 6264284337</p>

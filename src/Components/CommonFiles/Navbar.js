@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import '../../css/Navbar.css';
+import logo from '../../Images/logo.png';
 
 const Navbar = (props) => {
 
@@ -22,7 +23,9 @@ const Navbar = (props) => {
                     <div className="row">
 
                         <div className="col-lg-4">
-                            <h1 className="after_title"><Link to="/Home"> College Forum </Link></h1>                
+                            <Link to="/Home">
+                                <img className="logo_img" src={ logo } alt="College Forums" />
+                            </Link>               
                         </div>
 
                         <div className="col-lg-8">
@@ -44,7 +47,9 @@ const Navbar = (props) => {
                     <div className="row">
 
                         <div className="col-lg-4">
-                            <h1 className="before_title">College Forum</h1>                
+                            <Link to="/">
+                                <img src={ logo } className="logo_img" alt="College Forums" />
+                            </Link>
                         </div>
 
                         <div className="col-lg-8">
