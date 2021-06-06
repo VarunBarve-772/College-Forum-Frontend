@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from './CommonFiles/Navbar';
 import '../css/ourteamcard.css';
+import Varun from '../Images/Varun.jpeg';
 
 const About = (props) => {
 
@@ -46,7 +47,7 @@ const About = (props) => {
                 <div className="about_team">
                   <div className="top">
                     <h2 className="name">Varun Barve</h2>
-                    <img className="circle-img"  alt="avatar_img" />
+                    <img className="circle-img" src={ Varun } alt="avatar_img" />
                   </div>
                   <div className="bottom">
                     <p className="info">Email: varunbarve94@gmail.com</p>
@@ -65,7 +66,7 @@ const About = (props) => {
                   </div>
                   <div className="bottom">
                     <p className="info">Email : varunsharma13699@gmail.com</p>
-                    <p className="info">Phone : +9123456789</p>
+                    <p className="info">Phone : +91 6264284337</p>
                   </div>
                 </div>
               </div>

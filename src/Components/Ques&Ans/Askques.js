@@ -82,7 +82,7 @@ function Aques(props) {
 
                 <div className="askcard">       
                     <form className="form" onSubmit={ handleSubmit(questionSubmit) }>
-                        <h2 className="ask_ques_heading">Ask Your Question</h2><br/><br/><br/>
+                        <h2 className="ask_ques_heading"><strong>Ask Your Question</strong></h2><br/><br/><br/>
                         
                         <div className="ques_btns">
                             <p className="ask_op_btn" onClick={ () => codeState?setCodeState(false):setCodeState(true)}><b>{ "{ }" }</b></p>
@@ -112,8 +112,8 @@ function Aques(props) {
                                         <option value="General">General</option>
                                         <option value="SVIIT">SVIIT</option>
                                         <option value="SVITS">SVITS</option>
-                                        <option value="SVIM">SVIM</option>
-                                        <option value="SVVV">SVVV</option>
+                                        <option value="SVIM">SVIFS</option>
+                                        <option value="SVVV">SVIA</option>
                                         <option value="SVIFA">SVIFA</option>
                                     </select>
                             </div>

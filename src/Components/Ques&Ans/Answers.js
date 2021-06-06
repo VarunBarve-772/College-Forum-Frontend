@@ -24,7 +24,6 @@ const Answers = (props) => {
     };
     
     const submitSatisfactoryAnswer = (answer_id) => {
-        // if (answer_id === JSON.parse(sessionStorage.getItem('userId')))
         const data = {
             ans_id: answer_id,
             que_id: JSON.parse(sessionStorage.getItem('questionId'))
@@ -49,6 +48,7 @@ const Answers = (props) => {
         
         // Displaying results to console
         .then(json => {
+            console.log(json);
             if (json.response === 'Valid') {
                 props.setContentReload(props.contentReload + 1);
             } else if (json.response === 'Invalid') {
@@ -189,7 +189,7 @@ const Answers = (props) => {
                 <br/>
                 <input type="radio" value="Illegal Activities" name="category" /> Illegal Activities
                 <br/>
-                <input type="radio" value="Inappropriate info" name="category" /> Inappropriate info
+                <input type="radio" value="Inappropriate info" name="category" /> Inappropriate Info
                 <br/>
                 <input type="radio" value="Terrorist content" name="category" /> Terrorist content
                 <br/>

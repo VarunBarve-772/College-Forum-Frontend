@@ -185,7 +185,7 @@ const Question = (props) => {
                     <br/>
                     <input type="radio" value="Illegal Activities" name="category" /> Illegal Activities
                     <br/>
-                    <input type="radio" value="Inappropriate info" name="category" /> Inappropriate info
+                    <input type="radio" value="Inappropriate info" name="category" /> Inappropriate Info
                     <br/>
                     <input type="radio" value="Terrorist content" name="category" /> Terrorist content
                     <br/>
