@@ -4,6 +4,7 @@ import '../css/Front.css';
 import c1 from '../Images/c1.png';
 import c2 from '../Images/c2.png';
 import c3 from '../Images/c3.png';  
+import { Link } from "react-router-dom";
 
 function Front() {
     return(
@@ -15,18 +16,17 @@ function Front() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className="d-block w-100 ig" src={c3} alt="First slide"/>
-                <button className="reg_btn">Register</button>
+                <Link to="/Signin"><button className="reg_btn"> Register </button></Link>
               </div>
           
               <div className="carousel-item">
                 <img className="d-block w-100 ig" src={c1} alt="Second slide"/>
-                <button className="reg_btn">Register</button>
-
+                <Link to="/Signin"><button className="reg_btn"> Register </button></Link>
               </div>
           
               <div className="carousel-item">
                 <img className="d-block w-100 ig" src={c2} alt="Third slide"/>
-                <button className="reg_btn">Register</button>
+                <Link to="/Signin"><button className="reg_btn"> Register </button></Link>
 
               </div>
             </div>

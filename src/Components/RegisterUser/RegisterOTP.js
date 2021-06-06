@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import '../../css/OTP.css';
+import '../../css/Forgotpassword.css';
+import Particles from 'react-particles-js';
 
 const RegisterOTP = (props) => {
 
@@ -11,7 +12,7 @@ const RegisterOTP = (props) => {
 
   const onSubmitOTP = function(data) {
     data.location = 'register';
-    fetch("https://collegeforum.pythonanywhere.com/authentication/OTP", {
+    fetch("http://127.0.0.1:8000/authentication/OTP", {
       
             // Adding method type
             method: "POST",
@@ -44,21 +45,57 @@ const RegisterOTP = (props) => {
 
   }
 
-    return(
-      <div>
-          <div className="OTP-div">
+  const particlesOptions = {
+    particles: {
+        number: {
+            value: 40,
+            desity: {
+                enable: true,
+                value_area: 900
+            }
+        },
+        
+        color: {
+            value: "#17242A"
+        },
 
-            <h2>Account Verification!</h2>
-            <h6> Enter the OTP we sent on Your Email. </h6>
-            
-            <form onSubmit={handleSubmit(onSubmitOTP)}>
-              <input type="text" name="otpValue" {...register('otpValue')} className="smsCode" autoFocus="" maxLength="4" size="1" min="0" max="9" pattern="[0-9]{4}"/><br/>
+        size: {
+            value: 4
+        },
 
-              <button type="submit" className="otp_submit_button">Verify</button><br/>
-              <span className="error_msg">{ otpError }</span>
-            </form> 
-          </div>
-      </div>       
-    );
+        events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            },
+        }
+    }
+  }
+
+  return(
+    <div>
+    <Particles className="change_pass_particles_bg" params={particlesOptions} />
+    <div className="change_pass_bg"></div>
+
+    <div className="enrol_bg">
+      <div className="otp_card">
+
+        <center>
+          <h2>Account Verification!</h2>
+          <h6> Enter the OTP we just send on your Email. </h6>
+        </center>
+
+        <form onSubmit={handleSubmit(onSubmitOTP)}>
+          <center>
+            <input type="text" name="otpValue" {...register('otpValue')} className="smsCode otp_input_style" autoFocus="" maxLength="4" size="1" min="0" max="9" pattern="[0-9]{4}"/><br/>
+
+            <button type="submit" className="otp_submit_button">Verify</button><br/>
+            <span className="error_msg">{ otpError }</span>
+          </center>
+        </form> 
+      </div>
+    </div>
+  </div>       
+  );
 }
 export default RegisterOTP;

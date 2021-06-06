@@ -35,7 +35,6 @@ function Form(props) {
 
     const [idCardErrorMessage, setIdCardErrorMessage] = useState(false);
     const [usernameError, setUsernameError] = useState('');
-    let userAuthentication = '';
     
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
@@ -65,7 +64,7 @@ function Form(props) {
 
             data.idCard = base64File;
 
-            fetch("https://collegeforum.pythonanywhere.com/registerUser", {
+            fetch("http://127.0.0.1:8000/authentication/registerUser", {
       
                 // Adding method type
                 method: "POST",
@@ -85,23 +84,21 @@ function Form(props) {
             // Displaying results to console
             .then(json => {
                 if (json.response === 'Valid') {
-                    userAuthentication = 'Valid';
+                    setTimeout(() => {
+                        props.setState(<RegisterOTP setUserId={ props.setUserId } />)
+                    }, 1000);
                 } else if (json.response === 'Invalid') {
-                    userAuthentication = 'Invalid';
+                    setTimeout(() => {
+                        setUsernameError("This Enrollment is not Registered, Please insert correct Enrollment!!!");
+                        document.getElementById('otp_gif').style.display = 'none';
+                    }, 3000);
                 } else if (json.response === 'Wrong') {
+                    document.getElementById('otp_gif').style.display = 'none';
                     alert('Something Went Wrong, Please try Again!!!');
                 }
             });
     
             document.getElementById('otp_gif').style.display = 'block';
-            setTimeout(() => {
-                if (userAuthentication === "Valid"){
-                    props.setState(<RegisterOTP setState={props.setState}/>)
-                } else if(userAuthentication === "Invalid") {
-                    setUsernameError("This Enrollment is already Registered, Please insert correct Enrollment!!!");
-                    document.getElementById('otp_gif').style.display = 'none';
-                }
-            }, 4000);
         }
     }
 

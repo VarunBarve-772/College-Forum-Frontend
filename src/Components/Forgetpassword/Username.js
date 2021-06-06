@@ -14,7 +14,6 @@ const schema = yup.object().shape({
 
 const Username = (props) => {
 
-    let userAuthentication = '';
     const [usernameError, setUsernameError] = useState('');
 
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -22,8 +21,7 @@ const Username = (props) => {
     });
 
     const submitForm = (data) => {
-        console.log(data);
-        fetch("https://collegeforum.pythonanywhere.com/authentication/forgetPasswordUsername", {
+        fetch("http://127.0.0.1:8000/authentication/forgetPasswordUsername", {
       
             // Adding method type
             method: "POST",
@@ -43,23 +41,22 @@ const Username = (props) => {
         // Displaying results to console
         .then(json => {
             if (json.response === 'Valid') {
-                userAuthentication = 'Valid';
+                setTimeout(() => {
+                    props.setState(<ForgetOTP setState={props.setState} />)
+                }, 1000);
             } else if (json.response === 'Invalid') {
-                userAuthentication = 'Invalid';
+                setTimeout(() => {
+                    setUsernameError("This Enrollment is not Registered, Please insert correct Enrollment!!!");
+                    document.getElementById('otp_gif').style.display = 'none';
+                }, 3000);
             } else if (json.response === 'Wrong') {
+                document.getElementById('otp_gif').style.display = 'none';
                 alert('Something Went Wrong, Please try Again!!!');
             }
         });
 
         document.getElementById('otp_gif').style.display = 'block';
-        setTimeout(() => {
-            if (userAuthentication === "Valid"){
-                props.setState(<ForgetOTP setState={props.setState}/>)
-            } else if(userAuthentication === "Invalid") {
-                setUsernameError("This Enrollment is not Registered, Please insert correct Enrollment!!!");
-                document.getElementById('otp_gif').style.display = 'none';
-            }
-        }, 4000);
+  
     }
 
     const particlesOptions = {

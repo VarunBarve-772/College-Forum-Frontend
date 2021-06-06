@@ -9,66 +9,66 @@ const ForgetOTP = (props) => {
   const { register, handleSubmit } = useForm();
   const [otpError, setOtpError] = useState('');
 
-
   const onSubmitOTP = function(data) {
     data.location = 'forgetPassword'
-    fetch("https://collegeforum.pythonanywhere.com/authentication/OTP", {
+    fetch("http://127.0.0.1:8000/authentication/OTP", {
       
-            // Adding method type
-            method: "POST",
-            
-            // Adding body or contents to send
-            body: JSON.stringify(data),
-            
-            // Adding headers to the request
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })
+      // Adding method type
+      method: "POST",
+      
+      // Adding body or contents to send
+      body: JSON.stringify(data),
+      
+      // Adding headers to the request
+      headers: {
+          "Content-type": "application/json; charset=UTF-8"
+      }
+    })
   
-        // Converting to JSON
-        .then(response => response.json())
-        
-        // Displaying results to console
-        .then(json => {
-          if(json['result'] === 'Valid') {
-            props.setState(<ResetPass/>);
-          } else if (json.response === 'Invalid') {
-            setOtpError('Invalid OTP');
-          } else if (json.response === 'Wrong') {
-            alert('Something Went Wrong, Please Try Again!!!')
-          }
-        });
-      } 
+    // Converting to JSON
+    .then(response => response.json())
+    
+    // Displaying results to console
+    .then(json => {
+      console.log(json);
+      if(json['response'] === 'Valid') {
+        props.setState(<ResetPass/>);
+      } else if (json.response === 'Invalid') {
+        setOtpError('Invalid OTP');
+      } else if (json.response === 'Wrong') {
+        alert('Something Went Wrong, Please Try Again!!!')
+      }
+    });
+  } 
 
-      const particlesOptions = {
-        particles: {
-            number: {
-                value: 40,
-                desity: {
-                    enable: true,
-                    value_area: 900
-                }
-            },
-            
-            color: {
-                value: "#17242A"
-            },
-
-            size: {
-                value: 4
-            },
-
-            events: {
-                onhover: {
-                  enable: true,
-                  mode: "repulse"
-                },
+  const particlesOptions = {
+    particles: {
+        number: {
+            value: 40,
+            desity: {
+                enable: true,
+                value_area: 900
             }
+        },
+        
+        color: {
+            value: "#17242A"
+        },
+
+        size: {
+            value: 4
+        },
+
+        events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            },
         }
     }
+  }
 
-return(
+  return(
     <div>
       <Particles className="change_pass_particles_bg" params={particlesOptions} />
       <div className="change_pass_bg"></div>
