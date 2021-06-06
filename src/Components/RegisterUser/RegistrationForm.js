@@ -152,7 +152,9 @@ function Form(props) {
         <Particles className="particles_bg" params={particlesOptions} />
         <div className="register_bg"></div>
         <form className="register_form" onSubmit={handleSubmit(submitForm)}>
-            <h3 className="register_heading">Register</h3>
+            <center>
+                <h3 className="register_heading">Register</h3>
+            </center>
 
             <div className="row">
                 <div className="form-group col">

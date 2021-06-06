@@ -83,7 +83,7 @@ function ChangePassword() {
 
                 <div className="form-group">
                     <label>Old Password</label>
-                    <input type={oldPasswordVisibility ? "text" : "password"} name="oldPassword" {...register('oldPassword')} className="form-control input-style" />
+                    <input type={oldPasswordVisibility ? "text" : "password"} name="oldPassword" {...register('oldPassword')} className="form-control input-style change_pass_input" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('oldPassword')}>Show Password</span>
                     <p className="error_msg"> { errors.oldPassword?.message } </p>
                     <span className="error_msg"> { oldPasswordErrorMessage } </span>
@@ -92,14 +92,14 @@ function ChangePassword() {
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type={passwordVisibility ? "text" : "password"} name="password" {...register('password')} className="form-control input-style" />
+                    <input type={passwordVisibility ? "text" : "password"} name="password" {...register('password')} className="form-control input-style change_pass_input" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('password')}>Show Password</span>
                     <p className="error_msg">  { errors.password?.message }</p>
                 </div>
 
                 <div className="form-group">
                     <label>Confirm Password</label>
-                    <input type={confirmPasswordVisibility ? "text" : "password"} name="confirmPassword" {...register('confirmPassword')} className="form-control input-style" />
+                    <input type={confirmPasswordVisibility ? "text" : "password"} name="confirmPassword" {...register('confirmPassword')} className="form-control input-style change_pass_input" />
                     <span className="show-password" onClick={() => togglePasswordVisiblity('confirmPassword')}>Show Password</span>
                     <p className="error_msg">  { errors.confirmPassword && "Passwords should match" }</p>
                 </div>
